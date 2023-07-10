@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://1ea4jf3nilbj"]
+
+[ext_resource type="Script" path="res://Script/player2.gd" id="1_sjg6n"]
+[ext_resource type="Texture2D" uid="uid://j66gjyr0hx6y" path="res://graphics/character/character_single_1.png" id="2_ruhe5"]
+[ext_resource type="AudioStream" uid="uid://b7438binsyuym" path="res://audio/light-switch-156813.mp3" id="3_fc6ts"]
+[ext_resource type="AudioStream" uid="uid://cb2xrwd8jjuuu" path="res://audio/death_blood_splatter-105623.mp3" id="4_kblyh"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yq1r4"]
+radius = 21.0
+
+[node name="player2" type="Area2D"]
+script = ExtResource("1_sjg6n")
+
+[node name="CharacterSingle1" type="Sprite2D" parent="."]
+position = Vector2(-7.45064e-09, -1.19209e-07)
+rotation = -0.123918
+scale = Vector2(0.767208, 0.767208)
+texture = ExtResource("2_ruhe5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-20, 0)
+shape = SubResource("CircleShape2D_yq1r4")
+
+[node name="laserStartPositions" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="laserStartPositions"]
+position = Vector2(53, 0)
+
+[node name="nobullet" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_fc6ts")
+
+[node name="sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_kblyh")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

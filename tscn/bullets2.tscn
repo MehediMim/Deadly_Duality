@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://lo54qlx8byia"]
+
+[ext_resource type="Script" path="res://Script/bullets.gd" id="1_0dlwt"]
+[ext_resource type="Texture2D" uid="uid://cy37pnrgsms5l" path="res://graphics/bullets/bullets2.png" id="2_8pm8f"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_od0u8"]
+friction = 0.0
+bounce = 1000.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xcb4c"]
+radius = 7.0
+
+[node name="bullets" type="RigidBody2D"]
+mass = 0.01
+inertia = 100.0
+physics_material_override = SubResource("PhysicsMaterial_od0u8")
+gravity_scale = 0.0
+script = ExtResource("1_0dlwt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xcb4c")
+
+[node name="Bullets2" type="Sprite2D" parent="."]
+texture = ExtResource("2_8pm8f")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

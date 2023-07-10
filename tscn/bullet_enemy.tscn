@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgu87h7wc2rfw"]
+
+[ext_resource type="Script" path="res://tscn/bullet_enemy.gd" id="1_gcv0j"]
+[ext_resource type="Texture2D" uid="uid://b8yxckrcytwrm" path="res://graphics/enemy/bull_2.png" id="2_lddfr"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_41l1c"]
+friction = 0.0
+bounce = 100.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2a0mi"]
+radius = 7.07107
+
+[node name="bullet_enemy" type="RigidBody2D"]
+inertia = 100.0
+physics_material_override = SubResource("PhysicsMaterial_41l1c")
+gravity_scale = 0.0
+script = ExtResource("1_gcv0j")
+
+[node name="Bull" type="Sprite2D" parent="."]
+position = Vector2(0.25, -0.25)
+scale = Vector2(1.03333, 1.03333)
+texture = ExtResource("2_lddfr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2a0mi")

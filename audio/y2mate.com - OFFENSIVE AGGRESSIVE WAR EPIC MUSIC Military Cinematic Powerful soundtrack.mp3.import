@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://f1mfil6brhh8"
+path="res://.godot/imported/y2mate.com - OFFENSIVE AGGRESSIVE WAR EPIC MUSIC Military Cinematic Powerful soundtrack.mp3-0e4f8f1c56ddc1190f2d1d2d20934131.mp3str"
+
+[deps]
+
+source_file="res://audio/y2mate.com - OFFENSIVE AGGRESSIVE WAR EPIC MUSIC Military Cinematic Powerful soundtrack.mp3"
+dest_files=["res://.godot/imported/y2mate.com - OFFENSIVE AGGRESSIVE WAR EPIC MUSIC Military Cinematic Powerful soundtrack.mp3-0e4f8f1c56ddc1190f2d1d2d20934131.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

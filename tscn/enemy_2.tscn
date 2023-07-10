@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0qn3vfb8i885"]
+
+[ext_resource type="Texture2D" uid="uid://cmsaq28h58ccm" path="res://graphics/enemy2/Asset 1.png" id="1_c3gi5"]
+[ext_resource type="Texture2D" uid="uid://djkn5kynuljfm" path="res://graphics/enemy2/Asset 2.png" id="2_vn75q"]
+[ext_resource type="Texture2D" uid="uid://mnra4bn6xy8a" path="res://graphics/enemy2/Asset 3.png" id="3_mvpt2"]
+[ext_resource type="Texture2D" uid="uid://bygb7talxgf8r" path="res://graphics/enemy2/Asset 4.png" id="4_qon8a"]
+[ext_resource type="Texture2D" uid="uid://bm0t7ec2krofc" path="res://graphics/enemy2/Asset 5.png" id="5_uqpxk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qsq6g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c3gi5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_vn75q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mvpt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qon8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_uqpxk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ya68"]
+radius = 50.0899
+
+[node name="enemy2" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qsq6g")
+autoplay = "default"
+frame_progress = 0.374315
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5ya68")

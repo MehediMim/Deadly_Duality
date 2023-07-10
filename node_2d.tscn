@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfe5aynwbu0ac"]
+
+[ext_resource type="Script" path="res://node_2d.gd" id="1_djmgw"]
+[ext_resource type="Script" path="res://Timer.gd" id="1_gjkrb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q6s0o"]
+
+[node name="enemyyy" type="Area2D"]
+script = ExtResource("1_djmgw")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("1_gjkrb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_q6s0o")
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]

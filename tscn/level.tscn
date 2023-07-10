@@ -1,0 +1,1648 @@
+[gd_scene load_steps=14 format=3 uid="uid://cg36lvkc7ho6x"]
+
+[ext_resource type="Script" path="res://Script/level.gd" id="1_ersag"]
+[ext_resource type="Texture2D" uid="uid://bybjm0lfpfif4" path="res://graphics/backgrounds/level.png" id="1_ihd2t"]
+[ext_resource type="PackedScene" uid="uid://ddv13e5aau0s1" path="res://tscn/player.tscn" id="3_0tb3r"]
+[ext_resource type="PackedScene" uid="uid://1ea4jf3nilbj" path="res://tscn/player_2.tscn" id="4_a5cvu"]
+[ext_resource type="PackedScene" uid="uid://dn23yjyf34rs2" path="res://bonus.tscn" id="5_t14e6"]
+[ext_resource type="PackedScene" uid="uid://hakogt1dev1i" path="res://tscn/wall.tscn" id="5_yf7bq"]
+[ext_resource type="PackedScene" uid="uid://dyae26143jyyf" path="res://enemy_2.tscn" id="8_65fo5"]
+[ext_resource type="PackedScene" uid="uid://cdnq3bstauveu" path="res://ui.tscn" id="8_r2dkw"]
+[ext_resource type="PackedScene" uid="uid://mtytwsaemrbq" path="res://tscn/enemy.tscn" id="8_r3tjm"]
+[ext_resource type="PackedScene" uid="uid://d1rhklaahqyoe" path="res://glo.tscn" id="9_jrptg"]
+[ext_resource type="AudioStream" uid="uid://f1mfil6brhh8" path="res://audio/y2mate.com - OFFENSIVE AGGRESSIVE WAR EPIC MUSIC Military Cinematic Powerful soundtrack.mp3" id="11_3byt8"]
+[ext_resource type="PackedScene" uid="uid://ccnnv7nyfkie1" path="res://medic.tscn" id="11_cxn38"]
+[ext_resource type="PackedScene" uid="uid://14uso5dvghhp" path="res://tank.tscn" id="11_u62e1"]
+
+[node name="level" type="Node2D"]
+script = ExtResource("1_ersag")
+
+[node name="ground" type="Node2D" parent="."]
+
+[node name="soil" type="Sprite2D" parent="ground"]
+texture_repeat = 2
+position = Vector2(8981, 247)
+scale = Vector2(0.600926, 0.600926)
+texture = ExtResource("1_ihd2t")
+offset = Vector2(100, 0.011)
+region_enabled = true
+region_rect = Rect2(6828, 1272, 32461.8, 4606.14)
+
+[node name="wall2" type="Node2D" parent="."]
+
+[node name="wall" parent="wall2" instance=ExtResource("5_yf7bq")]
+position = Vector2(85, 11)
+
+[node name="bonus" parent="." instance=ExtResource("5_t14e6")]
+position = Vector2(2819, 350)
+
+[node name="enemy" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(1182, 625)
+
+[node name="enemy54" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(1537, 1485)
+
+[node name="enemy55" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(1190, -2735)
+
+[node name="enemy56" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(1965, -895)
+
+[node name="enemy57" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(4701, -1667)
+
+[node name="enemy58" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(5056, -807)
+
+[node name="enemy59" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(6129, 5473)
+
+[node name="enemy60" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(6484, 6333)
+
+[node name="enemy61" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(12045, -2330)
+
+[node name="enemy62" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(12400, -1470)
+
+[node name="enemy2" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-3139, -1834)
+
+[node name="enemy3" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(1529, 171)
+
+[node name="enemy4" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(8134, -1656)
+
+[node name="enemy5" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(2753, 174)
+
+[node name="enemy6" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(1786, 421)
+
+[node name="enemy7" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1486, -3214)
+
+[node name="enemy8" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(8006, 3765)
+
+[node name="enemy9" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(3378, 469)
+
+[node name="enemy10" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(1474, 3979)
+
+[node name="enemy11" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10143, 2386)
+
+[node name="enemy12" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(4155, 193)
+
+[node name="enemy13" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(19967, 11329)
+
+[node name="enemy14" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(17445, 5808)
+
+[node name="enemy15" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(4473, 613)
+
+[node name="enemy16" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(16253, 72)
+
+[node name="enemy17" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(16913, 72)
+
+[node name="enemy18" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(17075, -4355)
+
+[node name="enemy19" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(16896, -723)
+
+[node name="enemy20" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(19541, -5545)
+
+[node name="enemy21" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(17828, -675)
+
+[node name="enemy22" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(6138, -2849)
+
+[node name="enemy23" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(21758, -3249)
+
+[node name="enemy24" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(18146, -255)
+
+[node name="enemy25" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7494, 292)
+
+[node name="enemy26" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(3798, 2650)
+
+[node name="enemy27" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7500, 1072)
+
+[node name="enemy28" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(4195, -6738)
+
+[node name="enemy29" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(3357, 3151)
+
+[node name="enemy30" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(20223, 5407)
+
+[node name="enemy31" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1611, 3532)
+
+[node name="enemy32" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(3871, 3529)
+
+[node name="enemy33" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1953, 3952)
+
+[node name="enemy34" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1389, 3955)
+
+[node name="enemy35" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(9819, 1219)
+
+[node name="enemy36" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1860, 2503)
+
+[node name="enemy37" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(8533, -557)
+
+[node name="enemy38" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(8901, -512)
+
+[node name="enemy39" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(13227, -3605)
+
+[node name="enemy40" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(13951, -6773)
+
+[node name="enemy41" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10468, -5244)
+
+[node name="enemy42" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(21144, -620)
+
+[node name="enemy43" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(14109, -3182)
+
+[node name="enemy44" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(12847, 3554)
+
+[node name="enemy45" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10173, 730)
+
+[node name="enemy46" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(23618, -5994)
+
+[node name="enemy47" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(8242, -5565)
+
+[node name="enemy63" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(6757, 7001)
+
+[node name="enemy64" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(14101, 6338)
+
+[node name="enemy65" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10190, 7012)
+
+[node name="enemy66" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(19131, 4313)
+
+[node name="enemy67" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(21597, 3123)
+
+[node name="enemy68" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(8194, 5819)
+
+[node name="enemy69" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(23814, 5419)
+
+[node name="enemy70" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(6251, 1930)
+
+[node name="enemy71" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(15283, 5063)
+
+[node name="enemy72" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(16007, 1895)
+
+[node name="enemy73" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(12524, 3424)
+
+[node name="enemy74" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(16165, 5486)
+
+[node name="enemy75" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10298, 3103)
+
+[node name="enemy76" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(6757, 7001)
+
+[node name="enemy77" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(14101, 6338)
+
+[node name="enemy78" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10190, 7012)
+
+[node name="enemy79" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(19131, 4313)
+
+[node name="enemy80" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(21597, 3123)
+
+[node name="enemy81" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(8194, 5819)
+
+[node name="enemy82" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(23814, 5419)
+
+[node name="enemy83" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(6251, 1930)
+
+[node name="enemy84" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(15283, 5063)
+
+[node name="enemy85" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(16007, 1895)
+
+[node name="enemy86" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(12524, 3424)
+
+[node name="enemy87" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(16165, 5486)
+
+[node name="medic" parent="." instance=ExtResource("11_cxn38")]
+position = Vector2(397, 346)
+
+[node name="enemy88" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10298, 3103)
+
+[node name="enemy48" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(2985, 8409)
+
+[node name="enemy49" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(21721, 2320)
+
+[node name="enemy50" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(12740, 4469)
+
+[node name="enemy51" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(13908, 7534)
+
+[node name="enemy52" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(13672, 4517)
+
+[node name="enemy53" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(14332, 4517)
+
+[node name="glo" parent="." instance=ExtResource("9_jrptg")]
+position = Vector2(53, 129)
+
+[node name="dustbin" type="Node" parent="."]
+
+[node name="tank" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(5930, 167)
+
+[node name="tank2" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(7669, -202)
+
+[node name="tank3" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(8550, 745)
+
+[node name="tank4" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(6192, 1050)
+
+[node name="tank5" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(2986, 765)
+
+[node name="tank6" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(6363, -767)
+
+[node name="tank7" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(9503, -304)
+
+[node name="tank8" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(10879, -585)
+
+[node name="tank9" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(11634, 843)
+
+[node name="tank10" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(14249, -531)
+
+[node name="tank11" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(14731, 613)
+
+[node name="tank12" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(12621, -293)
+
+[node name="tank13" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(12892, 727)
+
+[node name="tank14" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(15572, 1041)
+
+[node name="tank15" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(15572, 1041)
+rotation = 0.518685
+
+[node name="tank16" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(15558, -356)
+rotation = 0.518685
+
+[node name="enemy89" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(22407, -2370)
+
+[node name="enemy90" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(22762, -1510)
+
+[node name="enemy91" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(26615, 32)
+
+[node name="enemy92" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(27275, 32)
+
+[node name="enemy93" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(27258, -763)
+
+[node name="enemy94" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(28190, -715)
+
+[node name="enemy95" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(20181, 1179)
+
+[node name="enemy96" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(20535, 690)
+
+[node name="enemy97" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(26369, 1855)
+
+[node name="enemy98" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(26369, 1855)
+
+[node name="tank17" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(19865, -344)
+
+[node name="tank18" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(21241, -625)
+
+[node name="tank19" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(21996, 803)
+
+[node name="tank20" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(24611, -571)
+
+[node name="tank21" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(25093, 573)
+
+[node name="tank22" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(22983, -333)
+
+[node name="tank23" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(23254, 687)
+
+[node name="tank24" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(25934, 1001)
+
+[node name="tank25" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(25934, 1001)
+rotation = 0.518685
+
+[node name="tank26" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(25920, -396)
+rotation = 0.518685
+
+[node name="enemy99" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(19827, -5474)
+
+[node name="enemy100" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(20182, -4614)
+
+[node name="enemy101" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(24035, -3072)
+
+[node name="enemy102" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(24695, -3072)
+
+[node name="enemy103" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(24678, -3867)
+
+[node name="enemy104" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(25610, -3819)
+
+[node name="enemy105" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(17601, -1925)
+
+[node name="enemy106" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(17955, -2414)
+
+[node name="enemy107" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(23789, -1249)
+
+[node name="enemy108" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(23789, -1249)
+
+[node name="tank27" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(17285, -3448)
+
+[node name="tank28" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(18661, -3729)
+
+[node name="tank29" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(19416, -2301)
+
+[node name="tank30" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(22031, -3675)
+
+[node name="tank31" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(22513, -2531)
+
+[node name="tank32" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(20403, -3437)
+
+[node name="tank33" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(20674, -2417)
+
+[node name="tank34" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(23354, -2103)
+
+[node name="tank35" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(23354, -2103)
+rotation = 0.518685
+
+[node name="tank36" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(23340, -3500)
+rotation = 0.518685
+
+[node name="enemy109" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7619, -11749)
+
+[node name="enemy110" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7005, -9120)
+
+[node name="enemy111" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7458, -5377)
+
+[node name="enemy112" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(9675, -3081)
+
+[node name="enemy113" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7458, -5377)
+
+[node name="enemy114" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(9675, -3081)
+
+[node name="enemy115" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7582, -6180)
+
+[node name="enemy116" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(8268, -10870)
+
+[node name="enemy117" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(8623, -10010)
+
+[node name="enemy118" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(12476, -8468)
+
+[node name="enemy119" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(13136, -8468)
+
+[node name="enemy120" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(13119, -9263)
+
+[node name="enemy121" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(14051, -9215)
+
+[node name="enemy122" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(12230, -6645)
+
+[node name="enemy123" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(12230, -6645)
+
+[node name="tank37" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(7102, -9125)
+
+[node name="tank38" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(7857, -7697)
+
+[node name="tank39" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(10472, -9071)
+
+[node name="tank40" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(10954, -7927)
+
+[node name="tank41" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(8844, -8833)
+
+[node name="tank42" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(9115, -7813)
+
+[node name="tank43" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(11795, -7499)
+
+[node name="tank44" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(11795, -7499)
+rotation = 0.518685
+
+[node name="tank45" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(11781, -8896)
+rotation = 0.518685
+
+[node name="enemy124" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(9896, -11572)
+
+[node name="enemy125" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10556, -11572)
+
+[node name="enemy126" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10539, -12367)
+
+[node name="enemy127" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(11471, -12319)
+
+[node name="enemy128" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(9650, -9749)
+
+[node name="enemy129" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(9650, -9749)
+
+[node name="tank46" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(7892, -12175)
+
+[node name="tank47" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(8374, -11031)
+
+[node name="tank48" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(9215, -10603)
+
+[node name="tank49" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(9215, -10603)
+rotation = 0.518685
+
+[node name="tank50" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(9201, -12000)
+rotation = 0.518685
+
+[node name="enemy130" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1394, 5850)
+
+[node name="enemy131" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-2008, 8479)
+
+[node name="enemy132" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1555, 12222)
+
+[node name="enemy133" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(662, 14518)
+
+[node name="enemy134" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1555, 12222)
+
+[node name="enemy135" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(662, 14518)
+
+[node name="enemy136" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1431, 11419)
+
+[node name="enemy137" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(-745, 6729)
+
+[node name="enemy138" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(-390, 7589)
+
+[node name="enemy139" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(3463, 9131)
+
+[node name="enemy140" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(4123, 9131)
+
+[node name="enemy141" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(4106, 8336)
+
+[node name="enemy142" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(5038, 8384)
+
+[node name="enemy143" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(3217, 10954)
+
+[node name="enemy144" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(3217, 10954)
+
+[node name="tank51" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-1911, 8474)
+
+[node name="tank52" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-1156, 9902)
+
+[node name="tank53" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(1459, 8528)
+
+[node name="tank54" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(1941, 9672)
+
+[node name="tank55" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-169, 8766)
+
+[node name="tank56" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(102, 9786)
+
+[node name="tank57" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(2782, 10100)
+
+[node name="tank58" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(2782, 10100)
+rotation = 0.518685
+
+[node name="tank59" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(2768, 8703)
+rotation = 0.518685
+
+[node name="enemy145" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(883, 6027)
+
+[node name="enemy146" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(1543, 6027)
+
+[node name="enemy147" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(1526, 5232)
+
+[node name="enemy148" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(2458, 5280)
+
+[node name="enemy149" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(637, 7850)
+
+[node name="enemy150" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(637, 7850)
+
+[node name="tank60" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-1121, 5424)
+
+[node name="tank61" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-639, 6568)
+
+[node name="tank62" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(202, 6996)
+
+[node name="tank63" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(202, 6996)
+rotation = 0.518685
+
+[node name="tank64" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(188, 5599)
+rotation = 0.518685
+
+[node name="enemy151" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-3658, -9485)
+
+[node name="enemy152" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-4272, -6856)
+
+[node name="enemy153" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-3819, -3113)
+
+[node name="enemy154" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1602, -817)
+
+[node name="enemy155" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-3819, -3113)
+
+[node name="enemy156" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1602, -817)
+
+[node name="enemy157" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-3695, -3916)
+
+[node name="enemy158" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(-3009, -8606)
+
+[node name="enemy159" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(-2654, -7746)
+
+[node name="enemy160" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(1199, -6204)
+
+[node name="enemy161" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(1859, -6204)
+
+[node name="enemy162" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(1842, -6999)
+
+[node name="enemy163" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(2774, -6951)
+
+[node name="enemy164" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(953, -4381)
+
+[node name="enemy165" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(953, -4381)
+
+[node name="tank65" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-4175, -6861)
+
+[node name="tank66" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-3420, -5433)
+
+[node name="tank67" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-805, -6807)
+
+[node name="tank68" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-323, -5663)
+
+[node name="tank69" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-2433, -6569)
+
+[node name="tank70" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-2162, -5549)
+
+[node name="tank71" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(518, -5235)
+
+[node name="tank72" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(518, -5235)
+rotation = 0.518685
+
+[node name="tank73" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(504, -6632)
+rotation = 0.518685
+
+[node name="enemy166" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1381, -9308)
+
+[node name="enemy167" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-721, -9308)
+
+[node name="enemy168" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-738, -10103)
+
+[node name="enemy169" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(194, -10055)
+
+[node name="enemy170" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1627, -7485)
+
+[node name="enemy171" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-1627, -7485)
+
+[node name="tank74" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-3385, -9911)
+
+[node name="tank75" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-2903, -8767)
+
+[node name="tank76" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-2062, -8339)
+
+[node name="tank77" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-2062, -8339)
+rotation = 0.518685
+
+[node name="tank78" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-2076, -9736)
+rotation = 0.518685
+
+[node name="enemy172" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7790, 8541)
+
+[node name="enemy173" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7176, 11170)
+
+[node name="enemy174" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7629, 14913)
+
+[node name="enemy175" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(9846, 17209)
+
+[node name="enemy176" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7629, 14913)
+
+[node name="enemy177" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(9846, 17209)
+
+[node name="enemy178" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(7753, 14110)
+
+[node name="enemy179" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(8439, 9420)
+
+[node name="enemy180" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(8794, 10280)
+
+[node name="enemy181" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(12647, 11822)
+
+[node name="enemy182" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(13307, 11822)
+
+[node name="enemy183" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(13290, 11027)
+
+[node name="enemy184" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(14222, 11075)
+
+[node name="enemy185" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(12401, 13645)
+
+[node name="enemy186" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(12401, 13645)
+
+[node name="tank79" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(7273, 11165)
+
+[node name="tank80" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(8028, 12593)
+
+[node name="tank81" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(10643, 11219)
+
+[node name="tank82" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(11125, 12363)
+
+[node name="tank83" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(9015, 11457)
+
+[node name="tank84" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(9286, 12477)
+
+[node name="tank85" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(11966, 12791)
+
+[node name="tank86" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(11966, 12791)
+rotation = 0.518685
+
+[node name="tank87" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(11952, 11394)
+rotation = 0.518685
+
+[node name="enemy187" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10067, 8718)
+
+[node name="enemy188" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10727, 8718)
+
+[node name="enemy189" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(10710, 7923)
+
+[node name="enemy190" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(11642, 7971)
+
+[node name="enemy191" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(9821, 10541)
+
+[node name="enemy192" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(9821, 10541)
+
+[node name="tank88" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(8063, 8115)
+
+[node name="tank89" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(8545, 9259)
+
+[node name="tank90" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(9386, 9687)
+
+[node name="tank91" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(9386, 9687)
+rotation = 0.518685
+
+[node name="tank92" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(9372, 8290)
+rotation = 0.518685
+
+[node name="enemy193" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(16333, 8456)
+
+[node name="enemy194" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(15719, 11085)
+
+[node name="enemy195" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(16172, 14828)
+
+[node name="enemy196" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(18389, 17124)
+
+[node name="enemy197" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(16172, 14828)
+
+[node name="enemy198" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(18389, 17124)
+
+[node name="enemy199" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(16296, 14025)
+
+[node name="enemy200" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(16982, 9335)
+
+[node name="enemy201" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(17337, 10195)
+
+[node name="enemy202" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(21190, 11737)
+
+[node name="enemy203" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(21850, 11737)
+
+[node name="enemy204" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(21833, 10942)
+
+[node name="enemy205" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(22765, 10990)
+
+[node name="enemy206" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(20944, 13560)
+
+[node name="enemy207" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(20944, 13560)
+
+[node name="tank93" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(15816, 11080)
+
+[node name="tank94" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(16571, 12508)
+
+[node name="tank95" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(19186, 11134)
+
+[node name="tank96" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(19668, 12278)
+
+[node name="tank97" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(17558, 11372)
+
+[node name="tank98" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(17829, 12392)
+
+[node name="tank99" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(20509, 12706)
+
+[node name="tank100" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(20509, 12706)
+rotation = 0.518685
+
+[node name="tank101" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(20495, 11309)
+rotation = 0.518685
+
+[node name="enemy208" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(18610, 8633)
+
+[node name="enemy209" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(19270, 8633)
+
+[node name="enemy210" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(19253, 7838)
+
+[node name="enemy211" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(20185, 7886)
+
+[node name="enemy212" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(18364, 10456)
+
+[node name="enemy213" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(18364, 10456)
+
+[node name="tank102" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(16606, 8030)
+
+[node name="tank103" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(17088, 9174)
+
+[node name="tank104" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(17929, 9602)
+
+[node name="tank105" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(17929, 9602)
+rotation = 0.518685
+
+[node name="tank106" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(17915, 8205)
+rotation = 0.518685
+
+[node name="enemy214" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(23296, 4355)
+
+[node name="enemy215" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(22682, 6984)
+
+[node name="enemy216" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(23135, 10727)
+
+[node name="enemy217" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(25352, 13023)
+
+[node name="enemy218" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(23135, 10727)
+
+[node name="enemy219" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(25352, 13023)
+
+[node name="enemy220" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(23259, 9924)
+
+[node name="enemy221" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(23945, 5234)
+
+[node name="enemy222" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(24300, 6094)
+
+[node name="enemy223" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(28153, 7636)
+
+[node name="enemy224" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(28813, 7636)
+
+[node name="enemy225" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(28796, 6841)
+
+[node name="enemy226" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(29728, 6889)
+
+[node name="enemy227" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(27907, 9459)
+
+[node name="enemy228" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(27907, 9459)
+
+[node name="tank107" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(22779, 6979)
+
+[node name="tank108" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(23534, 8407)
+
+[node name="tank109" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(26149, 7033)
+
+[node name="tank110" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(26631, 8177)
+
+[node name="tank111" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(24521, 7271)
+
+[node name="tank112" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(24792, 8291)
+
+[node name="tank113" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(27472, 8605)
+
+[node name="tank114" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(27472, 8605)
+rotation = 0.518685
+
+[node name="tank115" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(27458, 7208)
+rotation = 0.518685
+
+[node name="enemy229" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(25573, 4532)
+
+[node name="enemy230" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(26233, 4532)
+
+[node name="enemy231" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(26216, 3737)
+
+[node name="enemy232" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(27148, 3785)
+
+[node name="enemy233" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(25327, 6355)
+
+[node name="enemy234" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(25327, 6355)
+
+[node name="tank116" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(23569, 3929)
+
+[node name="tank117" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(24051, 5073)
+
+[node name="tank118" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(24892, 5501)
+
+[node name="tank119" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(24892, 5501)
+rotation = 0.518685
+
+[node name="tank120" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(24878, 4104)
+rotation = 0.518685
+
+[node name="enemy235" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(26799, -8331)
+
+[node name="enemy236" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(26185, -5702)
+
+[node name="enemy237" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(26638, -1959)
+
+[node name="enemy238" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(28855, 337)
+
+[node name="enemy239" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(26638, -1959)
+
+[node name="enemy240" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(28855, 337)
+
+[node name="enemy241" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(26762, -2762)
+
+[node name="enemy242" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(27448, -7452)
+
+[node name="enemy243" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(27803, -6592)
+
+[node name="enemy244" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(31656, -5050)
+
+[node name="enemy245" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(32316, -5050)
+
+[node name="enemy246" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(32299, -5845)
+
+[node name="enemy247" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(33231, -5797)
+
+[node name="enemy248" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(31410, -3227)
+
+[node name="enemy249" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(31410, -3227)
+
+[node name="tank121" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(26282, -5707)
+
+[node name="tank122" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(27037, -4279)
+
+[node name="tank123" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(29652, -5653)
+
+[node name="tank124" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(30134, -4509)
+
+[node name="tank125" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(28024, -5415)
+
+[node name="tank126" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(28295, -4395)
+
+[node name="tank127" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(30975, -4081)
+
+[node name="tank128" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(30975, -4081)
+rotation = 0.518685
+
+[node name="tank129" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(30961, -5478)
+rotation = 0.518685
+
+[node name="enemy250" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(29076, -8154)
+
+[node name="enemy251" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(29736, -8154)
+
+[node name="enemy252" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(29719, -8949)
+
+[node name="enemy253" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(30651, -8901)
+
+[node name="enemy254" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(28830, -6331)
+
+[node name="enemy255" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(28830, -6331)
+
+[node name="tank130" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(27072, -8757)
+
+[node name="tank131" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(27554, -7613)
+
+[node name="tank132" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(28395, -7185)
+
+[node name="tank133" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(28395, -7185)
+rotation = 0.518685
+
+[node name="tank134" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(28381, -8582)
+rotation = 0.518685
+
+[node name="enemy256" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-9295, -1753)
+
+[node name="enemy257" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-9909, 876)
+
+[node name="enemy258" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-9456, 4619)
+
+[node name="enemy259" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-7239, 6915)
+
+[node name="enemy260" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-9456, 4619)
+
+[node name="enemy261" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-7239, 6915)
+
+[node name="enemy262" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-9332, 3816)
+
+[node name="enemy263" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(-8646, -874)
+
+[node name="enemy264" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(-8291, -14)
+
+[node name="enemy265" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-4438, 1528)
+
+[node name="enemy266" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-3778, 1528)
+
+[node name="enemy267" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-3795, 733)
+
+[node name="enemy268" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-2863, 781)
+
+[node name="enemy269" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-4684, 3351)
+
+[node name="enemy270" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-4684, 3351)
+
+[node name="tank135" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-9812, 871)
+
+[node name="tank136" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-9057, 2299)
+
+[node name="tank137" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-6442, 925)
+
+[node name="tank138" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-5960, 2069)
+
+[node name="tank139" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-8070, 1163)
+
+[node name="tank140" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-7799, 2183)
+
+[node name="tank141" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-5119, 2497)
+
+[node name="tank142" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-5119, 2497)
+rotation = 0.518685
+
+[node name="tank143" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-5133, 1100)
+rotation = 0.518685
+
+[node name="enemy271" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-7018, -1576)
+
+[node name="enemy272" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-6358, -1576)
+
+[node name="enemy273" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-6375, -2371)
+
+[node name="enemy274" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-5443, -2323)
+
+[node name="enemy275" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-7264, 247)
+
+[node name="enemy276" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-7264, 247)
+
+[node name="tank144" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-9022, -2179)
+
+[node name="tank145" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-8540, -1035)
+
+[node name="tank146" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-7699, -607)
+
+[node name="tank147" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-7699, -607)
+rotation = 0.518685
+
+[node name="tank148" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-7713, -2004)
+rotation = 0.518685
+
+[node name="enemy277" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-8654, 7217)
+
+[node name="enemy278" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-9268, 9846)
+
+[node name="enemy279" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-8815, 13589)
+
+[node name="enemy280" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-6598, 15885)
+
+[node name="enemy281" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-8815, 13589)
+
+[node name="enemy282" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-6598, 15885)
+
+[node name="enemy283" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-8691, 12786)
+
+[node name="enemy284" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(-8005, 8096)
+
+[node name="enemy285" parent="." instance=ExtResource("8_r3tjm")]
+position = Vector2(-7650, 8956)
+
+[node name="enemy286" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-3797, 10498)
+
+[node name="enemy287" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-3137, 10498)
+
+[node name="enemy288" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-3154, 9703)
+
+[node name="enemy289" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-2222, 9751)
+
+[node name="enemy290" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-4043, 12321)
+
+[node name="enemy291" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-4043, 12321)
+
+[node name="tank149" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-9171, 9841)
+
+[node name="tank150" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-8416, 11269)
+
+[node name="tank151" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-5801, 9895)
+
+[node name="tank152" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-5319, 11039)
+
+[node name="tank153" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-7429, 10133)
+
+[node name="tank154" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-7158, 11153)
+
+[node name="tank155" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-4478, 11467)
+
+[node name="tank156" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-4478, 11467)
+rotation = 0.518685
+
+[node name="tank157" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-4492, 10070)
+rotation = 0.518685
+
+[node name="enemy292" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-6377, 7394)
+
+[node name="enemy293" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-5717, 7394)
+
+[node name="enemy294" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-5734, 6599)
+
+[node name="enemy295" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-4802, 6647)
+
+[node name="enemy296" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-6623, 9217)
+
+[node name="enemy297" parent="." instance=ExtResource("8_65fo5")]
+position = Vector2(-6623, 9217)
+
+[node name="tank158" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-8381, 6791)
+
+[node name="tank159" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-7899, 7935)
+
+[node name="tank160" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-7058, 8363)
+
+[node name="tank161" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-7058, 8363)
+rotation = 0.518685
+
+[node name="tank162" parent="." instance=ExtResource("11_u62e1")]
+position = Vector2(-7072, 6966)
+rotation = 0.518685
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(165, -18)
+stream = ExtResource("11_3byt8")
+volume_db = -0.812
+autoplay = true
+
+[node name="player" parent="." instance=ExtResource("3_0tb3r")]
+position = Vector2(154, 238)
+collision_layer = 15
+collision_mask = 15
+
+[node name="player2" parent="." instance=ExtResource("4_a5cvu")]
+position = Vector2(161, 453)
+
+[node name="UI" parent="." instance=ExtResource("8_r2dkw")]
+
+[connection signal="toshowgraphics" from="enemy" to="." method="_on_enemy_toshowgraphics"]
+[connection signal="area_entered" from="enemy53" to="." method="_on_enemy_53_area_entered"]
+[connection signal="area_entered" from="tank" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank2" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank3" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank4" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank5" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank6" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank7" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank8" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank9" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank10" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank11" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank12" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank13" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank14" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank15" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank16" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank17" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank18" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank19" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank20" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank21" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank22" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank23" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank24" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank25" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank26" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank27" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank28" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank29" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank30" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank31" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank32" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank33" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank34" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank35" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank36" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank37" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank38" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank39" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank40" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank41" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank42" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank43" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank44" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank45" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank46" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank47" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank48" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank49" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank50" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank51" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank52" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank53" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank54" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank55" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank56" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank57" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank58" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank59" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank60" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank61" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank62" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank63" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank64" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank65" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank66" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank67" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank68" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank69" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank70" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank71" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank72" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank73" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank74" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank75" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank76" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank77" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank78" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank79" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank80" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank81" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank82" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank83" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank84" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank85" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank86" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank87" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank88" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank89" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank90" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank91" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank92" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank93" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank94" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank95" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank96" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank97" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank98" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank99" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank100" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank101" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank102" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank103" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank104" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank105" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank106" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank107" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank108" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank109" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank110" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank111" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank112" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank113" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank114" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank115" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank116" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank117" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank118" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank119" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank120" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank121" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank122" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank123" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank124" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank125" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank126" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank127" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank128" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank129" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank130" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank131" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank132" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank133" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank134" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank135" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank136" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank137" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank138" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank139" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank140" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank141" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank142" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank143" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank144" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank145" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank146" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank147" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank148" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank149" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank150" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank151" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank152" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank153" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank154" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank155" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank156" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank157" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank158" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank159" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank160" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank161" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="tank162" to="." method="_on_tank_area_entered"]
+[connection signal="area_entered" from="player" to="." method="_on_player_area_entered"]
+[connection signal="shooted" from="player" to="." method="_on_player_shooted"]
+[connection signal="shooted2" from="player2" to="." method="_on_player_2_shooted_2"]

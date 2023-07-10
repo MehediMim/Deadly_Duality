@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://du7s7ageyxbmy"]
+
+[ext_resource type="Texture2D" uid="uid://cywibcnciou83" path="res://graphics/backgrounds/character_selecting.png" id="1_fmdkk"]
+[ext_resource type="Script" path="res://Script/select_character.gd" id="1_iusdx"]
+[ext_resource type="AudioStream" uid="uid://h05xtme1gmbd" path="res://audio/modern-trailer-short-version-16066.mp3" id="3_bgqvw"]
+[ext_resource type="Texture2D" uid="uid://ikil4np2uost" path="res://graphics/buttons/play.png" id="4_yw6dk"]
+[ext_resource type="AudioStream" uid="uid://brvnqmvpmyaiv" path="res://audio/sci-fi-energy-gun-39409.mp3" id="5_m2rfg"]
+
+[node name="select_character" type="Node2D"]
+script = ExtResource("1_iusdx")
+
+[node name="CharacterSelecting" type="Sprite2D" parent="."]
+position = Vector2(768.198, 432)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_fmdkk")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 69.0
+offset_top = 67.0
+offset_right = 148.0
+offset_bottom = 147.0
+flat = true
+
+[node name="bg" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_bgqvw")
+autoplay = true
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 1148.0
+offset_top = 676.0
+offset_right = 1289.0
+offset_bottom = 748.0
+icon = ExtResource("4_yw6dk")
+flat = true
+
+[node name="button_music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_m2rfg")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.35
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.325
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

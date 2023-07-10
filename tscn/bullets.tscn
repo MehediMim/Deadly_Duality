@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://3tqo0no18b24"]
+
+[ext_resource type="Texture2D" uid="uid://bsbvs7trpsr5q" path="res://graphics/bullets/bullets.png" id="1_7boqb"]
+[ext_resource type="Script" path="res://tscn/bullets.gd" id="1_qb782"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nwg70"]
+friction = 0.0
+bounce = 100.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jl2si"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xcb4c"]
+radius = 7.0
+
+[node name="bullets" type="RigidBody2D"]
+mass = 0.01
+inertia = 100.0
+physics_material_override = SubResource("PhysicsMaterial_nwg70")
+gravity_scale = 0.0
+script = ExtResource("1_qb782")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_jl2si")
+
+[node name="Bullets" type="Sprite2D" parent="."]
+position = Vector2(-4.76837e-07, 4.76837e-07)
+scale = Vector2(0.411765, 0.411765)
+texture = ExtResource("1_7boqb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xcb4c")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

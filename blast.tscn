@@ -1,0 +1,61 @@
+[gd_scene load_steps=12 format=3 uid="uid://djsuxj8871tht"]
+
+[ext_resource type="Texture2D" uid="uid://dic7yvsmf4ufw" path="res://graphics/blast/Asset 2.png" id="1_nyufp"]
+[ext_resource type="Script" path="res://blast.gd" id="1_r2jas"]
+[ext_resource type="Texture2D" uid="uid://brcfuka5wsn8i" path="res://graphics/blast/Asset 3.png" id="2_tp2fe"]
+[ext_resource type="Texture2D" uid="uid://7sse6fij3l08" path="res://graphics/blast/Asset 4.png" id="3_05xje"]
+[ext_resource type="Texture2D" uid="uid://bg40fwx5lfwnp" path="res://graphics/blast/Asset 5.png" id="4_j072g"]
+[ext_resource type="Texture2D" uid="uid://31s32cooj87v" path="res://graphics/blast/Asset 6.png" id="5_1v13n"]
+[ext_resource type="Texture2D" uid="uid://cu6kq5x055g0a" path="res://graphics/blast/Asset 7.png" id="6_pcb5l"]
+[ext_resource type="Texture2D" uid="uid://d2aeswo3wkyfn" path="res://graphics/blast/Asset 8.png" id="7_uesjb"]
+[ext_resource type="Texture2D" uid="uid://dh88yfoepqw3k" path="res://graphics/blast/Asset 9.png" id="8_gx6j1"]
+[ext_resource type="Texture2D" uid="uid://bvr17v8uwp2ly" path="res://graphics/blast/Asset 10.png" id="9_2qq7e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x6iq1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nyufp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tp2fe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_05xje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_j072g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1v13n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pcb5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_uesjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_gx6j1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2qq7e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="blast" type="Node2D"]
+script = ExtResource("1_r2jas")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, 1)
+sprite_frames = SubResource("SpriteFrames_x6iq1")
+autoplay = "default"
+frame_progress = 0.10577
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqj43er1ji3x5"]
+
+[ext_resource type="Script" path="res://tutorial.gd" id="1_0k6oi"]
+[ext_resource type="Texture2D" uid="uid://d4cgn23yyaxn3" path="res://graphics/backgrounds/tutorial.png" id="1_2ts6c"]
+[ext_resource type="Texture2D" uid="uid://ikil4np2uost" path="res://graphics/buttons/play.png" id="3_vlxjn"]
+
+[node name="tutorial" type="Node2D"]
+script = ExtResource("1_0k6oi")
+
+[node name="Tutorial" type="Sprite2D" parent="."]
+position = Vector2(768, 432)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_2ts6c")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 688.0
+offset_top = 718.0
+offset_right = 932.0
+offset_bottom = 804.0
+flat = true
+
+[node name="Play" type="Sprite2D" parent="Button"]
+position = Vector2(119, 44)
+texture = ExtResource("3_vlxjn")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddpm72x10wye"]
+
+[ext_resource type="Texture2D" uid="uid://cy37pnrgsms5l" path="res://graphics/bullets/bullets2.png" id="1_y5h56"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ybotn"]
+size = Vector2(181, 129)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(11, 32)
+
+[node name="Bullets2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(17, 13)
+texture = ExtResource("1_y5h56")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(69.5, 22.5)
+shape = SubResource("RectangleShape2D_ybotn")

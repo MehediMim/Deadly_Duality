@@ -1,0 +1,65 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdnq3bstauveu"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_6aasv"]
+[ext_resource type="FontFile" uid="uid://boy2b1846m6sg" path="res://graphics/fonts/EvilEmpire-4BBVK.ttf" id="3_n0t48"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_6aasv")
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.897
+anchor_top = 0.149
+anchor_right = 0.927
+anchor_bottom = 0.271
+offset_left = 0.208008
+offset_top = 0.263992
+offset_right = -0.39209
+offset_bottom = 0.335953
+theme_override_fonts/font = ExtResource("3_n0t48")
+theme_override_font_sizes/font_size = 40
+text = "30"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.816
+anchor_top = 0.148
+anchor_right = 0.881
+anchor_bottom = 0.201
+offset_left = -0.376099
+offset_top = 0.127998
+offset_right = -0.216064
+offset_bottom = 0.335999
+theme_override_fonts/font = ExtResource("3_n0t48")
+theme_override_font_sizes/font_size = 40
+text = "BULLET"
+
+[node name="Label3" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.104
+anchor_top = 0.843
+anchor_right = 0.255
+anchor_bottom = 0.899
+offset_left = 0.319992
+offset_top = -0.440063
+offset_right = 0.399963
+offset_bottom = 0.0799561
+theme_override_fonts/font = ExtResource("3_n0t48")
+theme_override_font_sizes/font_size = 54
+text = "0000"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchors_preset = -1
+anchor_left = 0.71
+anchor_top = 0.061
+anchor_right = 0.94
+anchor_bottom = 0.111
+offset_left = 0.799927
+offset_top = 0.119995
+offset_right = 0.199951
+offset_bottom = 0.119987
+theme_override_fonts/font = ExtResource("3_n0t48")
+theme_override_font_sizes/font_size = 37
+max_value = 20.0
+step = 1.0
+value = 20.0

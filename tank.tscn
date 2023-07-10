@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://14uso5dvghhp"]
+
+[ext_resource type="Script" path="res://tank.gd" id="1_eol64"]
+[ext_resource type="Texture2D" uid="uid://cm7ln3dtr4lmt" path="res://graphics/tankj/Asset 1.png" id="1_g52ue"]
+[ext_resource type="AudioStream" uid="uid://dq6nwdee4lafj" path="res://audio/spade-hacking-sound-with-gore-effects-96909.mp3" id="3_8v3c6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8wc7x"]
+radius = 68.2257
+
+[node name="tank" type="Area2D"]
+script = ExtResource("1_eol64")
+
+[node name="Asset1" type="Sprite2D" parent="."]
+position = Vector2(3, -14)
+scale = Vector2(0.790541, 0.790541)
+texture = ExtResource("1_g52ue")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -14)
+scale = Vector2(0.790541, 0.790541)
+shape = SubResource("CircleShape2D_8wc7x")
+
+[node name="s" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8v3c6")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

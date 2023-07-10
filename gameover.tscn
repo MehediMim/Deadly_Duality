@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqdkfmwlec2la"]
+
+[ext_resource type="Script" path="res://gameover.gd" id="1_db434"]
+[ext_resource type="Texture2D" uid="uid://be1riyjn8dydv" path="res://graphics/buttons/quit.png" id="2_wej3p"]
+[ext_resource type="FontFile" uid="uid://boy2b1846m6sg" path="res://graphics/fonts/EvilEmpire-4BBVK.ttf" id="4_fwq1g"]
+[ext_resource type="AudioStream" uid="uid://meemuf1lvagj" path="res://audio/game-over-38511.mp3" id="5_7wr3m"]
+
+[node name="Node2D" type="CanvasLayer"]
+script = ExtResource("1_db434")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 672.0
+offset_top = 566.0
+offset_right = 913.0
+offset_bottom = 632.0
+theme_override_fonts/font = ExtResource("4_fwq1g")
+theme_override_font_sizes/font_size = 59
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 564.0
+offset_top = 273.0
+offset_right = 1044.0
+offset_bottom = 530.0
+theme_override_fonts/font = ExtResource("4_fwq1g")
+theme_override_font_sizes/font_size = 243
+text = "0000"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 626.0
+offset_top = 685.0
+offset_right = 925.0
+offset_bottom = 843.0
+size_flags_horizontal = 8
+theme_override_fonts/font = ExtResource("4_fwq1g")
+theme_override_font_sizes/font_size = 54
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Sprite2D" parent="Button"]
+position = Vector2(172, 39)
+texture = ExtResource("2_wej3p")
+
+[node name="sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_7wr3m")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

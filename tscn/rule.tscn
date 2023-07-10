@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0h0e8iuij70o"]
+
+[ext_resource type="Script" path="res://Script/rule.gd" id="1_lgcrt"]
+[ext_resource type="Texture2D" uid="uid://burcpsj8ubuth" path="res://graphics/backgrounds/rule.png" id="1_mthy0"]
+
+[node name="rule" type="Node2D"]
+script = ExtResource("1_lgcrt")
+
+[node name="Rule" type="Sprite2D" parent="."]
+position = Vector2(768, 432)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_mthy0")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyl55xger0gxe"]
+
+[ext_resource type="Script" path="res://tscn/enemy_tower.gd" id="1_rt3pe"]
+[ext_resource type="Texture2D" uid="uid://q8pwt8smbt62" path="res://graphics/enemy/enemy_tower.png" id="2_x2mby"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0aim"]
+size = Vector2(84, 82)
+
+[node name="enemy_tower" type="StaticBody2D"]
+script = ExtResource("1_rt3pe")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[node name="EnemyTower" type="Sprite2D" parent="."]
+position = Vector2(1, -2)
+rotation = 1.5708
+texture = ExtResource("2_x2mby")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k0aim")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(48, 0)
+rotation = 1.5708
+
+[connection signal="to_shot_from_tower" from="." to="." method="_on_to_shot_from_tower"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

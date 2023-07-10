@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cninw12slcm25"]
+
+[ext_resource type="Script" path="res://generate_random_palyer.gd" id="1_lqbq7"]
+
+[node name="generate_random_palyer" type="Node2D"]
+script = ExtResource("1_lqbq7")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

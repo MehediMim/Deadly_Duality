@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccnnv7nyfkie1"]
+
+[ext_resource type="Texture2D" uid="uid://btjgst58ccnkr" path="res://graphics/wall/Asset 212.png" id="1_rutkm"]
+
+[node name="medic" type="Node2D"]
+
+[node name="Asset212" type="Sprite2D" parent="."]
+position = Vector2(1, -5)
+texture = ExtResource("1_rutkm")
